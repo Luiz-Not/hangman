@@ -1,0 +1,62 @@
+.hangman {
+  position: relative;
+    top: 42px;
+    left: 90px;
+    z-index: 9;
+}
+
+.hangman-head {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.hangman-body {
+  width: 1px;
+  height: 30px;
+  border-right: 1px solid #000000;
+  position: absolute;
+  left: 9px;
+
+}
+
+.hangman-left-arm {
+  width: 1px;
+  height: 20px;
+  border-right: 1px solid #000000;
+  position: absolute;
+  left: 3px;
+  top: 21px;
+  transform: rotate(30deg);
+}
+
+.hangman-right-arm {
+  width: 1px;
+  height: 20px;
+  border-right: 1px solid #000000;
+  position: absolute;
+  left: 15px;
+  top: 21px;
+  transform: rotate(-30deg);
+}
+
+.hangman-left-leg {
+  width: 1px;
+  height: 20px;
+  border-right: 1px solid #000000;
+  position: absolute;
+  left: 4px;
+  top: 50px;
+  transform: rotate(30deg);
+}
+
+.hangman-right-leg {
+  width: 1px;
+  height: 20px;
+  border-right: 1px solid #000000;
+  position: absolute;
+  left: 14px;
+  top: 50px;
+  transform: rotate(-30deg);
+}

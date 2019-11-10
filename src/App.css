@@ -1,0 +1,10 @@
+.App {
+  margin: 0px 48px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 48px;
+}

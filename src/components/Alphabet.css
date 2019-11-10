@@ -1,0 +1,28 @@
+.alphabet {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Opera and Firefox */
+}
+
+.alphabet span {
+  width: 20px;
+  margin: 0 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.letter-right {
+  color: #4dd599;
+  font-weight: bold;
+}
+
+.letter-wrong {
+  color: #f0134d;
+  font-weight: bold;
+}
