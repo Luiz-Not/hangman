@@ -10,12 +10,12 @@ class Form extends React.Component {
     const { history } = this.props
     const { word } = this.state
     if (word) {
-      history.push(`/hangman/${window.btoa(word)}`)
+      history.push(`/hangman/${window.btoa(word.toLowerCase())}`)
     }
   }
 
   handleChange = event => {
-    this.setState({ word: event.target.value })
+    this.setState({ word: event.target.value.replace(/[^A-Za-z]/ig, '') })
   }
 
   render() {
