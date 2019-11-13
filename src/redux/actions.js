@@ -1,12 +1,17 @@
-import { SET_RIGHT_LETTER, SET_WRONG_LETTER } from "./actionTypes";
+import { SET_RIGHT_LETTER, SET_WRONG_LETTER, SET_WORD } from "./actionTypes";
 import { getWordSelector, getRightLettersSelector, getWrongLettersLengthSelector } from "./selectors"
+
+export const setWord = word => ({
+  type: SET_WORD,
+  payload: {
+    word: window.atob(word)
+  }
+})
 
 export const setLetter = letter => async (dispatch, getState) => {
   const state = getState()
   const word = getWordSelector(state)
   const wrongLettersLength = getWrongLettersLengthSelector(state)
-
-  console.log('unca setletter', letter)
 
   if (wrongLettersLength === 6) {
     return false

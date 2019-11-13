@@ -1,7 +1,7 @@
-import { SET_RIGHT_LETTER, SET_WRONG_LETTER } from "../actionTypes";
+import { SET_RIGHT_LETTER, SET_WRONG_LETTER, SET_WORD } from "../actionTypes";
 
 const initialState = {
-  word: 'arrombado',
+  word: '',
   rightLetters: [],
   wrongLetters: []
 };
@@ -21,6 +21,13 @@ export default function(state = initialState, action) {
         ...state,
         wrongLetters: [...state.wrongLetters, letter]
       };
+    }
+    case SET_WORD: {
+      const { word } = action.payload
+      return {
+        ...state,
+        word
+      }
     }
     default:
       return state;

@@ -1,21 +1,33 @@
-import React from 'react';
-import './App.css';
-import Gallows from './components/Gallows'
-import Word from './components/Word'
-import Alphabet from './components/Alphabet'
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useParams
+} from "react-router-dom";
 
-function App() {
+import './App.css';
+import Page from './components/Page'
+import Form from './components/Form'
+
+export default function App() {
   return (
     <div className="App">
-      <div className="row">
-        <Gallows />
-        <Word />
-      </div>
-      <div className="row">
-        <Alphabet />
-      </div>
+      <Router>
+        <Switch>
+          <Route path="/hangman/:id" children={<Hangman />} />
+          <Route path="/" children={<Home />} />
+        </Switch>
+      </Router>
     </div>
   );
 }
 
-export default App;
+function Home() {
+  return <Form />
+}
+
+function  Hangman() {
+  let { id } = useParams()
+  return <Page word={id} />
+}
